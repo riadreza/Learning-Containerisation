@@ -44,3 +44,22 @@ networks:
     external: true
 ```
 {% endcode %}
+
+Create a directory for Traefik data.
+
+```bash
+sudo mkdir trefik-data
+```
+
+Then create a .json file for acme configuration.
+
+```bash
+sudo touch acme.json
+```
+
+change the `acme.json` file permission.
+
+```bash
+sudo chmod 600 /opt/treafik/treafik-data/acme.json
+```
+

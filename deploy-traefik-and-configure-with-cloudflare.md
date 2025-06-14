@@ -63,3 +63,19 @@ change the `acme.json` file permission.
 sudo chmod 600 /opt/treafik/treafik-data/acme.json
 ```
 
+
+
+Create a folder, in my case.`traefik-data`
+
+```bash
+sudo mkdir traefik-data
+```
+
+Now we can add a file `acme.json`to that folder. Then change the permission for the file.
+
+```
+sudo touch acme.json
+sudo chmod 600 acme.json
+```
+
+Now create a `taefik.yml` file in that `traefik` directory.&#x20;

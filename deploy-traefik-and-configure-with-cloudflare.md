@@ -48,30 +48,20 @@ networks:
 Create a directory for Traefik data.
 
 ```bash
-sudo mkdir trefik-data
+sudo mkdir traefik-data
 ```
 
 Then create a .json file for acme configuration.
 
 ```bash
-sudo touch acme.json
+sudo touch traefik-data/acme.json
 ```
 
 change the `acme.json` file permission.
 
 ```bash
-sudo chmod 600 /opt/treafik/treafik-data/acme.json
+sudo chmod 600 /opt/traefik/traefik-data/acme.json
 ```
-
-
-
-Create a folder, in my case.`traefik-data`
-
-```bash
-sudo mkdir traefik-data
-```
-
-Now we can add a file `acme.json`to that folder. Then change the permission for the file.
 
 ```
 sudo touch acme.json

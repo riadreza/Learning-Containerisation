@@ -57,7 +57,7 @@ Then create a .json file for acme configuration.
 sudo touch traefik-data/acme.json
 ```
 
-change the `acme.json` file permission.
+Change the `acme.json`file permission.
 
 ```bash
 sudo chmod 600 /opt/traefik/traefik-data/acme.json
@@ -68,4 +68,51 @@ sudo touch acme.json
 sudo chmod 600 acme.json
 ```
 
-Now create a `taefik.yml` file in that `traefik` directory.&#x20;
+Now, create a `taefik.yml`file in that `traefik-data`directory.&#x20;
+
+```
+sudo touch traefik-data/traefik.yml
+```
+
+<pre><code>api:
+  dashboard: true
+  insecure: false
+
+entryPoints:
+  web:
+    address: :80
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: :443
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: web
+
+certificatesResolvers:
+  cloudflare:
+    acme:
+      email: <a data-footnote-ref href="#user-content-fn-1">your email address</a>
+      storage: /acme.json
+      dnsChallenge:
+        provider: cloudflare
+        resolvers:
+          - "1.1.1.1:53"
+          - "8.8.8.8:53"
+log:
+  level: error
+
+</code></pre>
+
+Now run the Docker Compose file:
+
+```
+sudo docker compose -f docker-traefik.yml up -d
+```
+
+[^1]: 

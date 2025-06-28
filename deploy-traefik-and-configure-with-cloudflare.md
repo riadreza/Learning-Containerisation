@@ -63,18 +63,18 @@ Change the `acme.json`file permission.
 sudo chmod 600 /opt/traefik/traefik-data/acme.json
 ```
 
-```
+```bash
 sudo touch acme.json
 sudo chmod 600 acme.json
 ```
 
 Now, create a `taefik.yml`file in that `traefik-data`directory.&#x20;
 
-```
+```bash
 sudo touch traefik-data/traefik.yml
 ```
 
-<pre><code>api:
+<pre class="language-yaml"><code class="lang-yaml">api:
   dashboard: true
   insecure: false
 
@@ -111,7 +111,7 @@ log:
 
 Now run the Docker Compose file:
 
-```
+```bash
 sudo docker compose -f docker-traefik.yml up -d
 ```
 

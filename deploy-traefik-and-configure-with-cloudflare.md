@@ -1,5 +1,21 @@
 ---
 icon: user-beard-bolt
+cover: .gitbook/assets/Gemini_Generated_Image_ao5eqzao5eqzao5e.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Deploy Traefik and configure with Cloudflare

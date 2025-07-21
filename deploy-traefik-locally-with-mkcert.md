@@ -20,8 +20,6 @@ mkcert -key-file key.pem -cert-file cert.pem "local domain name/localhost"
 
 Compose file for traefik deployment. `docker-traefik.yml`&#x20;
 
-
-
 ```yaml
 services:
   traefik:
@@ -54,3 +52,41 @@ networks:
     external: true
     
 ```
+
+Now, create a `taefik.yml`file in that `traefik-data`directory.&#x20;
+
+```bash
+sudo touch traefik-data/traefik.yml
+```
+
+```yaml
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: ":443"
+
+api:
+  dashboard: true
+  insecure: false
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+
+tls:
+  certificates:
+    - certFile: "/etc/traefik/certs/cert.pem"
+      keyFile: "/etc/traefik/certs/key.pem"
+
+log:
+  level: DEBUG
+
+```
+

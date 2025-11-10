@@ -28,7 +28,7 @@ Prerequisites\
 
 \- Ensure Docker and Docker Compose are installed.\
 \- Open ports 80 and 443 on the HAProxy host.\
-\- Domain (haproxy.palobd.com) must point to the public IP of the HAProxy host (for Let’s Encrypt HTTP challenge).\
+\- Domain (ha.riad.com.bd) must point to the public IP of the HAProxy host (for Let’s Encrypt HTTP challenge).\
 \
 
 

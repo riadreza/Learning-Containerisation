@@ -105,12 +105,11 @@ services:
 networks:
   haproxy-net:
     external: true  # Use pre-existing external network
-
-
 ```
 
-```cfscript
+### HAProxy Configuration (haproxy.cfg)
 
+```context
 # =====================
 # Global Settings
 # =====================

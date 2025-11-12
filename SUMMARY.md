@@ -8,3 +8,4 @@
 * [Effortless Service Deployment with Traefik: Docker Compose for the ‘whoami’ Microservice](effortless-service-deployment-with-traefik-docker-compose-for-the-whoami-microservice.md)
 * [Troublshooting wordpress](troublshooting-wordpress.md)
 * [HAProxy Docker Deployment with Let’s Encrypt (Auto SSL Renewal)](haproxy-docker-deployment-with-lets-encrypt-auto-ssl-renewal.md)
+* [Docker troubleshoot](docker-troubleshoot.md)

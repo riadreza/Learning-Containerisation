@@ -27,3 +27,8 @@ sudo systemctl start docker.service
 sudo systemctl enable docker.service
 ```
 
+Hold packages to prevent auto-upgrade
+
+```bash
+sudo apt-mark hold docker-ce docker-ce-cli containerd.io
+```
